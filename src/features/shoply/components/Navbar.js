@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100px',
     height: '30px',
     fontWeight: '600',
-    margin: '5px',
+    margin: '5px 5px 5px 15px',
     cursor: 'pointer',
     '&:hover': {
       border: '1px solid rgba(0,0,0,0.3)'
@@ -60,7 +60,12 @@ const useStyles = makeStyles((theme) => ({
     color: '#fb8c00',
     fontWeight: '550',
     fontSize: '14px',
-  }
+  },
+  links: {
+    color: 'white',
+    fontSize: '18px',
+    marginRight: '20px',
+  },
 }));
 
 export default function Navbar() {
@@ -74,6 +79,9 @@ export default function Navbar() {
           <Typography variant="h5" className={classes.title} component={Link} to={"/"} >
             Shoply
           </Typography>
+          <Button className={classes.links} component={Link} to={"/"} >
+            Products
+          </Button> 
           <Button className={classes.cartWrapper} component={Link} to={"/cart/"} >
             <img className={classes.image} src={cart} alt="cart" />
             <div className={classes.cart}>Cart</div>
